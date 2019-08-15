@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class ProductProfile extends Component {
     constructor(props) {
         super(props);
+        console.log(this.props.match.params.id);
         this.state = {
             productList: [
                 {
@@ -53,10 +54,11 @@ class ProductProfile extends Component {
 
     render() {
         return (
-            this.state.productList.filter(product => product.category === this.props.match.params.category && product.id.toString() === this.props.match.params.id).map((product, index) =>
+            this.state.productList.filter(product => product.id.toString() === this.props.match.params.id).map((product, index) =>
                 <div key={index} className="product-profile">
                     <img key={index} className="product-img" src={product.img} alt="product"/>
                     <p className="caption">{product.caption}</p>
+                {/*    Need to add button here "add to cart" and the ability to add item to the cart*/}
                 </div>
             ))
     }

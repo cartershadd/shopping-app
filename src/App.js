@@ -16,6 +16,7 @@ function App() {
                     <p>Welcome</p>
                 </div>
                 <Switch>
+                    <Route exact path="/"/>
                     <Route exact path="/cart" component={Cart}/>
                     <Route exact path="/shop" component={ShopPage}/>
                     <Route exact path="/shop/:id" component={ProductProfile}/>

@@ -84,7 +84,7 @@ class Search extends Component {
                 <div className="searchResults">
                     {this.state.filteredProductList.map((product, index) => {
                         return <div key={index} className="product-profile">
-                            <Link to={`/${product.id}`} className="product-link">
+                            <Link to={`/shop/${product.id}`} className="product-link">
                                 <span className="product-name">{product.name}</span>
                                 <img src={product.img} alt="product" className="product-img"/>
                             </Link>
