@@ -1,8 +1,13 @@
 .app {
     text-align: center;
-    background-color: aliceblue;
+    background-color: darkcyan;
     margin: 0;
     padding: 0;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
 }
 
 .fa-shopping-cart {
@@ -14,7 +19,11 @@ ul {
 }
 
 /*Hamburger Menu Styles*/
-
+.navigation {
+    top: 0;
+    margin: 0;
+    height: 0;
+}
 
 .hamburgerLink {
     text-decoration: none;
@@ -27,7 +36,7 @@ ul {
     display: block;
     position: relative;
     top: 50px;
-    left: 50px;
+    left: 20px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -109,7 +118,7 @@ ul {
     display: inline-block;
     text-align: center;
     margin: 0.5rem;
-    padding: 0.5rem;
+    padding: 0;
     width: 320px;
 }
 
@@ -117,10 +126,23 @@ ul {
     width: 300px;
     height: 300px;
     padding: 0.5rem;
+    border-radius: 10px 50px;
 }
 
 .product-link, .product-name {
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0;
     color: black;
+}
+
+.profile-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Search*/
+.form {
+    margin-top: 6rem;
 }

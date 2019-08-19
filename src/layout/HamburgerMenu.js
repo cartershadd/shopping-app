@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const HamburgerMenu = () => {
     return (
-            <nav className="navigation">
+            <div className="navigation">
                 <div className="menu-toggle">
 
                 <input type="checkbox" />
@@ -28,7 +28,7 @@ const HamburgerMenu = () => {
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </div>
     );
 };
 

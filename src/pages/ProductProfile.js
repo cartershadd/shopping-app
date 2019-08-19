@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class ProductProfile extends Component {
     constructor(props) {
         super(props);
+        console.log(this.props.product)
         this.state = {
             productList: [
                 {
@@ -34,14 +35,14 @@ class ProductProfile extends Component {
                     category: "drink"
                 },
                 {
-                    id: 4,
+                    id: 5,
                     name: "Red rose",
                     img: [process.env.PUBLIC_URL + '/images/redRose.jpeg'],
                     caption: "Smells good!",
                     category: "flower"
                 },
                 {
-                    id: 5,
+                    id: 6,
                     name: "Sunflowers",
                     img: [process.env.PUBLIC_URL + '/images/sunflower.jpg'],
                     caption: "For your garden or kitchen.",
@@ -53,10 +54,13 @@ class ProductProfile extends Component {
 
     render() {
         return (
-            this.state.productList.filter(product => product.category === this.props.match.params.category && product.id.toString() === this.props.match.params.id).map((product, index) =>
+            this.state.productList.filter(product => product.id.toString() === this.props.match.params.id).map((product, index) =>
                 <div key={index} className="product-profile">
+                    <h2 className="item-name">{product.name}</h2>
                     <img key={index} className="product-img" src={product.img} alt="product"/>
                     <p className="caption">{product.caption}</p>
+                    <p className="price-tag">Price: FREE!</p>
+                    <button>Add to Cart</button>
                 </div>
             ))
     }

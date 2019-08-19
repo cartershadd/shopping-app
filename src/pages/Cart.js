@@ -11,7 +11,6 @@ const Cart = () => {
                     <Link to="/">
                         <button
                             className="btn return-btn"
-                            variant="primary"
                         >
                             Return to Shop
                         </button>

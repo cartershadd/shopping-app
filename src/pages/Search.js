@@ -34,14 +34,14 @@ class Search extends Component {
                 category: "drink"
             },
             {
-                id: 4,
+                id: 5,
                 name: "Red rose",
                 img: [ process.env.PUBLIC_URL + '/images/redRose.jpeg'],
                 caption: "Smells good!",
                 category: "flower"
             },
             {
-                id: 5,
+                id: 6,
                 name: "Sunflowers",
                 img: [ process.env.PUBLIC_URL + '/images/sunflower.jpg'],
                 caption: "For your garden or kitchen.",
@@ -65,7 +65,7 @@ class Search extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <form onSubmit={this.onSubmit} className="form">
                     <input
                         id="searchForm"
@@ -84,7 +84,7 @@ class Search extends Component {
                 <div className="searchResults">
                     {this.state.filteredProductList.map((product, index) => {
                         return <div key={index} className="product-profile">
-                            <Link to={`/${product.id}`} className="product-link">
+                            <Link to={`/shop/${product.id}`} className="product-link">
                                 <span className="product-name">{product.name}</span>
                                 <img src={product.img} alt="product" className="product-img"/>
                             </Link>

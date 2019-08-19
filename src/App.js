@@ -6,16 +6,15 @@ import HamburgerMenu from "./layout/HamburgerMenu";
 import Search from "./pages/Search";
 import ShopPage from "./pages/ShopPage";
 import ProductProfile from "./pages/ProductProfile";
+import Home from "./pages/Home";
 
 function App() {
     return (
         <Router>
-            <HamburgerMenu/>
             <div className="app">
-                <div className="container">
-                    <p>Welcome</p>
-                </div>
+                <HamburgerMenu/>
                 <Switch>
+                    <Route exact path="/" component={Home}/>
                     <Route exact path="/cart" component={Cart}/>
                     <Route exact path="/shop" component={ShopPage}/>
                     <Route exact path="/shop/:id" component={ProductProfile}/>
