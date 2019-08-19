@@ -1,9 +1,13 @@
-.app, .container, body {
+.app {
     text-align: center;
     background-color: darkcyan;
     margin: 0;
     padding: 0;
+}
+
+.container {
     height: 100%;
+    width: 100%;
 }
 
 .fa-shopping-cart {
@@ -85,7 +89,7 @@ ul {
     position: absolute;
     width: 300px;
     margin: -100px 0 0 -50px;
-    padding: 50px 25px 25px;
+    padding: 125px 50px 50px;
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -141,15 +145,4 @@ ul {
 /*Search*/
 .form {
     margin-top: 6rem;
-}
-
-.search-bar {
-    width: 300px;
-    height: 30px;
-}
-
-.search-btn {
-    height: 40px;
-    background-color: #232323;
-    color: ghostwhite;
 }
