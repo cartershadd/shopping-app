@@ -6,7 +6,7 @@ class ProductPreview extends Component {
         return (
             <div className="product-profile">
                 <Link to={`/shop/${this.props.product.id}`} className="product-link">
-                    <span className="product-name">{this.props.product.name}</span>
+                    <h2 className="product-name">{this.props.product.name}</h2>
                     <img src={this.props.product.img} alt="product" className="product-img"/>
                 </Link>
             </div>

@@ -35,14 +35,14 @@ class ShopPage extends Component {
                     category: "drink"
                 },
                 {
-                    id: 4,
+                    id: 5,
                     name: "Red rose",
                     img: [process.env.PUBLIC_URL + '/images/redRose.jpeg'],
                     caption: "Smells good!",
                     category: "flower"
                 },
                 {
-                    id: 5,
+                    id: 6,
                     name: "Sunflowers",
                     img: [process.env.PUBLIC_URL + '/images/sunflower.jpg'],
                     caption: "For your garden or kitchen.",
@@ -54,10 +54,11 @@ class ShopPage extends Component {
 
     render() {
         return (
-            <div>
-                <ProductPreview product={this.state.productList[0]}/>
-            </div>
-        );
+            this.state.productList.map((product, index) =>
+                <div key={index} className="profile-product">
+                    <ProductPreview product={product}/>
+                </div>
+            ))
     }
 }
 
