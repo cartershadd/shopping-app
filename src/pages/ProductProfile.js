@@ -47,6 +47,20 @@ class ProductProfile extends Component {
                     img: [process.env.PUBLIC_URL + '/images/sunflower.jpg'],
                     caption: "For your garden or kitchen.",
                     category: "flower"
+                },
+                {
+                    id: 7,
+                    name: "Naked Rat",
+                    img: [process.env.PUBLIC_URL + '/images/nakedRat.jpg'],
+                    caption: "Hairless like a sphynx cat, affectionate like a pup - pairs well with Albino Rat.",
+                    category: "animal"
+                },
+                {
+                    id: 8,
+                    name: "Albino Rat",
+                    img: [process.env.PUBLIC_URL + '/images/albinoRat.jpg'],
+                    caption: "Affectionate and hyperactive, this widdle wat pairs well with the Naked Rat.",
+                    category: "animal"
                 }
             ]
         }

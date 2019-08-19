@@ -110,6 +110,10 @@ ul {
 }
 
 /*Product CSS*/
+.item-name {
+    margin-top: 0.25rem;
+}
+
 .product-profile {
     display: inline-block;
     text-align: center;
