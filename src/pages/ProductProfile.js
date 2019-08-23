@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import {addToCart} from "../actions";
+import {connect} from 'react-redux';
 
 class ProductProfile extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props.product)
         this.state = {
             productList: [
                 {
@@ -61,9 +62,62 @@ class ProductProfile extends Component {
                     img: [process.env.PUBLIC_URL + '/images/albinoRat.jpg'],
                     caption: "Affectionate and hyperactive, this widdle wat pairs well with the Naked Rat.",
                     category: "animal"
+                },
+                {
+                    id: 9,
+                    name: "Cactus",
+                    img: [process.env.PUBLIC_URL + '/images/cactus.jpg'],
+                    caption: "Prickly and easy to grow!",
+                    category: ""
+                },
+                {
+                    id: 10,
+                    name: "Yellow Mushroom",
+                    img: [process.env.PUBLIC_URL + '/images/mushroom.jpg'],
+                    caption: "Fungus among us...",
+                    category: "fungus"
+                },
+                {
+                    id: 11,
+                    name: "Red Mushroom",
+                    img: [process.env.PUBLIC_URL + '/images/redMushroom.jpg'],
+                    caption: "Fungus among us, now in red!",
+                    category: "fungus"
+                },
+                {
+                    id: 12,
+                    name: "Gecko",
+                    img: [process.env.PUBLIC_URL + '/images/dancingGecko.jpg'],
+                    caption: "A cute reptile that sticks to walls!",
+                    category: "animal"
+                },
+                {
+                    id: 13,
+                    name: "White Rose",
+                    img: [process.env.PUBLIC_URL + '/images/whiteRose.jpg'],
+                    caption: "Smells good, comes in white.",
+                    category: "flower"
+                },
+                {
+                    id: 14,
+                    name: "Latte Art",
+                    img: [process.env.PUBLIC_URL + '/images/latteArt.jpg'],
+                    caption: "Makes any coffee look that much fancier!",
+                    category: "drink"
+                },
+                {
+                    id: 15,
+                    name: "Fused Bananas",
+                    img: [process.env.PUBLIC_URL + '/images/fusedBanana.jpg'],
+                    caption: "Is it one banana or two? You decide!",
+                    category: "food"
                 }
             ]
         }
+    }
+
+    addProductToCart(product) {
+        this.props.dispatch(addToCart(product))
     }
 
     render() {
@@ -74,11 +128,17 @@ class ProductProfile extends Component {
                     <img key={index} className="product-img" src={product.img} alt="product"/>
                     <p className="caption">{product.caption}</p>
                     <p className="price-tag">Price: FREE!</p>
-                    <button>Add to Cart</button>
+                    <button onClick={this.addProductToCart()}>Add to Cart</button>
                 </div>
             ))
     }
 }
 
-export default ProductProfile;
+const mapStateToProps = state => {
+    console.log(state)
+    return {
+        items: state.items,
+    };
+};
+export default connect(mapStateToProps)(ProductProfile);
 
