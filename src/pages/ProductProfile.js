@@ -128,14 +128,13 @@ class ProductProfile extends Component {
                     <img key={index} className="product-img" src={product.img} alt="product"/>
                     <p className="caption">{product.caption}</p>
                     <p className="price-tag">Price: FREE!</p>
-                    <button onClick={this.addProductToCart()}>Add to Cart</button>
+                    <button onClick={() => this.addProductToCart(product)}>Add to Cart</button>
                 </div>
             ))
     }
 }
 
 const mapStateToProps = state => {
-    console.log(state)
     return {
         items: state.items,
     };
