@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {addToCart} from "../actions";
 import {connect} from 'react-redux';
+import Button from 'react-bootstrap/Button';
 
 class ProductProfile extends Component {
     constructor(props) {
@@ -128,7 +129,7 @@ class ProductProfile extends Component {
                     <img key={index} className="product-img" src={product.img} alt="product"/>
                     <p className="caption">{product.caption}</p>
                     <p className="price-tag">Price: FREE!</p>
-                    <button onClick={() => this.addProductToCart(product)}>Add to Cart</button>
+                    <Button variant="primary" onClick={() => this.addProductToCart(product)}>Add to Cart</Button>
                 </div>
             ))
     }

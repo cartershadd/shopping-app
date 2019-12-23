@@ -5,7 +5,7 @@ class ProductPreview extends Component {
     render() {
         return (
             <div className="product-profile">
-                <Link to={`/shop/${this.props.product.id}`} className="product-link">
+                <Link to={`/${this.props.product.id}`} className="product-link">
                     <h2 className="product-name">{this.props.product.name}</h2>
                     <img src={this.props.product.img} alt="product" className="product-img"/>
                 </Link>

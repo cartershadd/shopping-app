@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Search from "./Search";
+import ShopPage from "./ShopPage";
 
-const Home = () => {
-    return (
-        <div className="container">
-            <h2>Welcome</h2>
-            <p>Enjoy this fake shopping website. Any images added to your cart will be emailed to you, at no cost.</p>
-            <p>Have fun!</p>
-        </div>
-    );
-};
+class Home extends Component {
+    render() {
+        return (
+            <div>
+                <Search/>
+                <ShopPage/>
+            </div>
+        );
+    }
+}
 
 export default Home;
