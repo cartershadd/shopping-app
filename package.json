@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "firebase": "^7.4.0",
     "g": "^2.0.1",

@@ -60,6 +60,10 @@ ul {
     color: ghostwhite;
 }
 
+.form {
+    margin: 1rem;
+}
+
 /* Cart styles */
 .return-btn, .checkout-btn {
     margin: 0.5rem;
