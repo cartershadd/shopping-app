@@ -12,16 +12,35 @@ class Cart extends Component {
     }
 
     sendEmail() {
-        var emailFunction = functions.httpsCallable('helloWorld');
+        var sendgridEmail = functions.httpsCallable('sendEmail');
+        let attachments = [];
 
-        emailFunction()
+        for (var i = 0; i < this.props.items.length; i++) {
+            let item = this.props.items[i];
+            attachments.push(
+                {
+                    content: item.content,
+                    filename: item.filename
+                })
+        }
 
-            .then(
-                function (result) {
-                    // Read result of the Cloud Function.
-                    console.log(result);
-                }
-            )
+        sendgridEmail({
+            to: 'carter.shadden@gmail.com',
+           // attachments: attachments,
+        }).then(function (result) {
+                // Read result of the Cloud Function.
+                console.log(result);
+            }
+        ).catch(function (error) {
+            // Getting the Error details.
+            //console.log(error);
+            var code = error.code;
+            var message = error.message;
+            var details = error.details;
+            console.log(code);
+            console.log(message);
+            console.log(details);
+        });
     }
 
     render() {
@@ -43,7 +62,7 @@ class Cart extends Component {
                     ) : (
                         <p className="cart-empty">Your shopping cart is currently empty.</p>
                     )}
-                <Button variant="success" onClick={this.sendEmail} className="checkout-btn">Checkout</Button>
+                <Button variant="success" onClick={() => this.sendEmail()} className="checkout-btn">Checkout</Button>
                 <p className="return-to-shop">
                     <Link to="/">
                         <Button className="return-btn" variant="secondary">
