@@ -90,20 +90,3 @@ ul {
         justify-content: center;
     }
 }
-
-/*@media screen and (min-width: 600px) {*/
-/*    .shop-page-wrap {*/
-/*        display: grid;*/
-/*        grid-template-columns: 1fr 1fr 1fr;*/
-/*        justify-items: center;*/
-/*    }*/
-/*}*/
-
-/*@media screen and (min-width: 1000px) {*/
-/*    .shop-page-wrap {*/
-/*        display: grid;*/
-/*        grid-template-columns: repeat(4, 1fr);*/
-/*        grid-template-rows: repeat(3, 1fr);*/
-/*        justify-items: center;*/
-/*    }*/
-/*}*/
