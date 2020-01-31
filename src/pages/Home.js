@@ -7,7 +7,9 @@ class Home extends Component {
         return (
             <div>
                 <Search/>
-                <ShopPage/>
+                <div className="shop-page-wrap">
+                    <ShopPage/>
+                </div>
             </div>
         );
     }

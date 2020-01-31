@@ -23,7 +23,7 @@ class Cart extends Component {
 
     render() {
         return (
-            <div>
+            <div className='cart-container'>
                 <h1>Cart</h1>
                 {this.props.items.length !== 0 ?
                     this.props.items.map((item, index) =>
